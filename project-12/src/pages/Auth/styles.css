@@ -1,0 +1,100 @@
+#auth {
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 25px;
+    background: #ffffff;
+}
+.form-box {
+    padding-top: 25px;
+}
+.auth-title {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #666666;
+}
+.btn-login-fb {
+    margin: 0 10px;
+    padding: 2px 10px 2px 3px;
+    text-indent: 35px;
+    border-radius: 18px;
+    border: none;
+    background: #546ea6 url(//theme.hstatic.net/1000388227/1000497091/14/facebook.png?v=1137) no-repeat left center;
+    background-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn-login-gg {
+    margin: 0 10px;
+    padding: 2px 10px 2px 3px;
+    text-indent: 35px;
+    border-radius: 18px;
+    border: none;
+    background: #df5656 url(//theme.hstatic.net/1000388227/1000497091/14/googleplus.png?v=1137) no-repeat left center;
+    background-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn-login-fb:focus,
+.btn-login-gg:focus {
+    outline: none;
+}
+.btn-login-fb:hover,
+.btn-login-gg:hover {
+    opacity: 0.5;
+}
+.auth-line {
+    position: relative;
+    border-bottom: 1px solid #dfdfdf;
+}
+.auth-line > span {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 3px;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #999999;
+}
+/* CSS FORM */
+.form-login {
+    width: 450px;
+    margin: 0 auto;
+}
+.auth-title-form {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #666666;
+}
+.inpForm {
+    height: 40px;
+    padding-left: 45px !important;
+    border-radius: 0 !important;
+    color: #666666 !important;
+}
+.frm-email,
+.frm-pass {
+    position: relative;
+}
+.frm-email > span,
+.frm-pass > span {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+}
+.btn-login:hover,
+.btn-register:hover {
+    background-color: #d61717 !important;
+    border: none;
+    color: #ffffff !important;
+}
+.forgetPass {
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.forgetPass:hover {
+    color: #d61717;
+}
