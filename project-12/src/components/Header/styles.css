@@ -1,10 +1,11 @@
 /* HEADER */
 #header {
     background: #1b1d4d;
+    width: 100%;
+    padding: 0 100px;
 }
 .navbar {
     height: 100px;
-    width: 100%;
 }
 /* LOGO */
 .navbar-logo {
@@ -17,7 +18,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 40%;
+    width: 55%;
     margin-bottom: 0;
     padding-left: 0;
 }
@@ -90,23 +91,83 @@
 }
 /* SEARCH */
 .search {
+    position: relative;
     width: 30%;
 }
-/* AUTH-CART */
-.auth-cart {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    width: 15%;
+.iconSearch {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #999;
 }
-.authHeader:hover,
-.cartHeader:hover {
-    transition: 0.5s;
-    transform: translateY(-8px);
+.inputSearch {
+    padding: 6px 20px 6px 35px !important;
 }
 /* RESPONSIVE */
-@media screen and (max-width: 960px) {
+@media only screen and (max-width: 768px) {
+    #header {
+        padding: 0;
+    }
+    .navbar {
+        height: 250px;
+    }
+    /* NOT DROPDOWN */
     .nav-item:hover .ul-item-dropdown {
         display: none;
+    }
+    /* MENU */
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        position: absolute;
+        top: 00px;
+        left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-menu.active {
+        background: #f75006;
+        left: 0;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .underlined {
+        display: none;
+    }
+    .nav-item {
+        border-bottom: 1px solid #ffffff;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .item-menu {
+        font-size: 19px;
+        color: #ffffff;
+    }
+    /* ICON MENU */
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: -20px;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 30px;
+        cursor: pointer;
+        color: #f75006;
+    }
+    /* LOGO */
+    .navbar-logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar-logo > img {
+        height: 150px;
+        width: auto;
+    }
+    /* SEARCH */
+    .search {
+        width: 80%;
+        margin: 0 auto;
     }
 }

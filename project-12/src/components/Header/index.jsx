@@ -10,7 +10,6 @@ function Header() {
     const [onclick, setOnclick] = useState(false);
     const handleClick = () => setOnclick(!onclick);
     const closeMobileMenu = () => setOnclick(false);
-
     const dataMenu = [
         {
             title: "Trang Chủ",
@@ -26,7 +25,6 @@ function Header() {
             title: "Sản Phẩm",
             icon: "//theme.hstatic.net/1000388227/1000497091/14/icon_nav_3.png?v=1131",
             path: "/sanpham",
-            // path: "/sanpham?type=product",
             menuItemChild: [
                 {
                     title: "G-SHOCK",
@@ -79,7 +77,20 @@ function Header() {
                 },
             ]
         },
+        {
+            title: "Đăng Nhập",
+            icon: iconUser,
+            path: "/auth",
+
+        },
+        {
+            title: "Giỏ Hàng",
+            icon: iconCart,
+            path: "/cart",
+
+        },
     ]
+
 
     const renderMenuItem = () => {
         return (dataMenu).map((menuItem, menuItemIndex) => {
@@ -124,39 +135,22 @@ function Header() {
     return (
         <>
             <header id="header">
-                <div className="container p-0">
-                    <div className="row">
-                        <nav className='navbar'>
-                            <p className="navbar-logo">
-                                <img src="//theme.hstatic.net/1000388227/1000497091/14/logo.png?v=1139" alt="Casio Anh Khuê Watch" height="80px" width="auto" />
-                            </p>
-                            <div className='menu-icon' onClick={handleClick}>
-                                <i className={onclick ? 'fas fa-times' : 'fas fa-bars'} />
-                            </div>
-                            <div class="search">
-                                <input type="text" class="form-control" />
-                            </div>
-                            <ul className={onclick ? 'nav-menu active' : 'nav-menu'}>
-                                {renderMenuItem()}
-                            </ul>
-                            <div className="auth-cart">
-                                <div
-                                    className="authHeader"
-                                    onClick={() => history.push('/auth')}
-                                >
-                                    <img src={iconUser} alt="" height="25px" width="auto" />
-                                    <span className="item-menu">Đăng Nhập</span>
-                                </div>
-                                <div className="cartHeader">
-                                    <img src={iconCart} alt="" height="25px" width="auto" />
-                                    <span className="item-menu">Giỏ Hàng</span>
-                                </div>
-                            </div>
-                        </nav>
+                <nav className='navbar'>
+                    <p className="navbar-logo">
+                        <img src="//theme.hstatic.net/1000388227/1000497091/14/logo.png?v=1139" alt="Casio Anh Khuê Watch" height="80px" width="auto" />
+                    </p>
+                    <div className='menu-icon' onClick={handleClick}>
+                        <i className={onclick ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
-                </div>
-            </header>
-
+                    <div class="search">
+                        <i class="fas fa-search iconSearch"></i>
+                        <input type="text" class="form-control inputSearch" placeholder="Nhập từ khóa tìm kiếm..." />
+                    </div>
+                    <ul className={onclick ? 'nav-menu active' : 'nav-menu'}>
+                        {renderMenuItem()}
+                    </ul>
+                </nav>
+            </header >
         </>
     );
 }
