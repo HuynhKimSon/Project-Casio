@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import history from '../../util/history';
 import iconToggle from '../../image/bars-solid.svg'
 import iconUser from '../../image/user.svg'
@@ -7,7 +7,9 @@ import './styles.css';
 
 function Header() {
 
-    // const [onclick, setOnclick] = useState(false);
+    const [onclick, setOnclick] = useState(false);
+    const handleClick = () => setOnclick(!onclick);
+    const closeMobileMenu = () => setOnclick(false);
 
     const dataMenu = [
         {
@@ -83,8 +85,8 @@ function Header() {
         return (dataMenu).map((menuItem, menuItemIndex) => {
             return (
                 <li
-                    key={`li-item-menu-${menuItemIndex}`}
-                    className={`li-item-menu ${history.location.pathname === menuItem.path ? 'menu-active' : ''}`}
+                    key={`${menuItemIndex}`}
+                    className={`nav-item ${history.location.pathname === menuItem.path ? 'menu-active' : ''}`}
                     onClick={() => history.push(menuItem.path)}
                 >
                     <img src={menuItem.icon} alt="iconMenu" height="25px" width="auto" />
@@ -120,53 +122,42 @@ function Header() {
         })
     }
     return (
-        <header id="headerPage">
-            <div className="container p-0">
-                <div className="row d-flex">
-                    <div id="headerLogo" style={{ cursor: "pointer" }}>
-                        <img onClick={() => history.push('/')} src="//theme.hstatic.net/1000388227/1000497091/14/logo.png?v=1131" title="Casio Anh Khuê" alt="Casio Anh Khuê" width="170px" height="70px" />
-                    </div>
-                    <div id="headerSearch">
-                        <div className="frmSearch">
-                            <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                </svg>
-                            </i>
-                            <input
-                                className="inputSearch"
-                                type="text"
-                                placeholder="Nhập từ khóa tìm kiếm..."
-                            />
-                        </div>
-                    </div>
-                    <div id="headerMenu">
-                        <nav id="nav_menu">
-                            <ul className="ul-menu">
+        <>
+            <header id="header">
+                <div className="container p-0">
+                    <div className="row">
+                        <nav className='navbar'>
+                            <p className="navbar-logo">
+                                <img src="//theme.hstatic.net/1000388227/1000497091/14/logo.png?v=1139" alt="Casio Anh Khuê Watch" height="80px" width="auto" />
+                            </p>
+                            <div className='menu-icon' onClick={handleClick}>
+                                <i className={onclick ? 'fas fa-times' : 'fas fa-bars'} />
+                            </div>
+                            <div class="search">
+                                <input type="text" class="form-control" />
+                            </div>
+                            <ul className={onclick ? 'nav-menu active' : 'nav-menu'}>
                                 {renderMenuItem()}
                             </ul>
+                            <div className="auth-cart">
+                                <div
+                                    className="authHeader"
+                                    onClick={() => history.push('/auth')}
+                                >
+                                    <img src={iconUser} alt="" height="25px" width="auto" />
+                                    <span className="item-menu">Đăng Nhập</span>
+                                </div>
+                                <div className="cartHeader">
+                                    <img src={iconCart} alt="" height="25px" width="auto" />
+                                    <span className="item-menu">Giỏ Hàng</span>
+                                </div>
+                            </div>
                         </nav>
                     </div>
-                    <div id="auth-cart">
-                        <div
-                            className="authHeader"
-                            onClick={() => history.push('/auth')}
-                        >
-                            <img src={iconUser} alt="" height="25px" width="auto" />
-                            <span className="item-menu">Đăng Nhập</span>
-                        </div>
-                        <div className="cartHeader">
-                            <img src={iconCart} alt="" height="25px" width="auto" />
-                            <span className="item-menu">Giỏ Hàng</span>
-                        </div>
-                    </div>
-                    <div id="iconToggle">
-                        <img src={iconToggle} alt="icon" height="35px" width="auto" />
-                    </div>
                 </div>
-            </div>
+            </header>
 
-        </header >
+        </>
     );
 }
 

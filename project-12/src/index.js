@@ -18,7 +18,7 @@ import Product from './pages/Product/index.jsx'
 import ProductOther from './pages/ProductOther/index.jsx'
 import Introduce from './pages/Introduce/index.jsx';
 
-
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 
