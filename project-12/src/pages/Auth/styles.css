@@ -57,7 +57,8 @@
     color: #999999;
 }
 /* CSS FORM */
-.form-login {
+.form-login,
+.form-register {
     width: 450px;
     margin: 0 auto;
 }
@@ -97,3 +98,4 @@
 .forgetPass:hover {
     color: #d61717;
 }
+/* CHANGE REGISTER AND LOGIN */

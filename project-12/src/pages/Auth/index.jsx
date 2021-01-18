@@ -24,7 +24,7 @@ function Auth() {
                     <div className="col-12 auth-line mt-4">
                         <span>HOẶC</span>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 login">
                         <h1 className="auth-title-form">Đăng Nhập</h1>
                         <Formik
                             initialValues={{
@@ -96,7 +96,7 @@ function Auth() {
                             </Form>
                         </Formik>
                     </div>
-                    <div className=" col-6 form-register">
+                    <div className=" col-6 register">
                         <h1 className="auth-title-form">Đăng Ký Thành Viên Mới</h1>
                         <Formik
                             initialValues={{
@@ -130,7 +130,7 @@ function Auth() {
                                 console.log(values);
                                 resetForm({ values: '' });
                             }}>
-                            <Form className="form-login">
+                            <Form className="form-register">
                                 <div className="form-group frm-email mb-4" >
                                     <Field
                                         name="lastname"

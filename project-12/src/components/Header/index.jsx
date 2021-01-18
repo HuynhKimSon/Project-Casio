@@ -9,7 +9,7 @@ function Header() {
 
     const [onclick, setOnclick] = useState(false);
     const handleClick = () => setOnclick(!onclick);
-    const closeMobileMenu = () => setOnclick(false);
+
     const dataMenu = [
         {
             title: "Trang Chủ",
@@ -77,18 +77,6 @@ function Header() {
                 },
             ]
         },
-        {
-            title: "Đăng Nhập",
-            icon: iconUser,
-            path: "/auth",
-
-        },
-        {
-            title: "Giỏ Hàng",
-            icon: iconCart,
-            path: "/cart",
-
-        },
     ]
 
 
@@ -98,7 +86,7 @@ function Header() {
                 <li
                     key={`${menuItemIndex}`}
                     className={`nav-item ${history.location.pathname === menuItem.path ? 'menu-active' : ''}`}
-                    onClick={() => history.push(menuItem.path)}
+                    onClick={() => history.push(menuItem.path) & setOnclick(false)}
                 >
                     <img src={menuItem.icon} alt="iconMenu" height="25px" width="auto" />
                     <span className="item-menu">{menuItem.title}</span>
@@ -148,6 +136,21 @@ function Header() {
                     </div>
                     <ul className={onclick ? 'nav-menu active' : 'nav-menu'}>
                         {renderMenuItem()}
+                        <li
+                            className="nav-item auth"
+                            onClick={() => history.push('/auth') & setOnclick(false)}
+                        >
+                            <img src={iconUser} alt="iconAuth" height="25px" width="auto" />
+                            <span className="item-menu">Đăng Nhập</span>
+                        </li>
+                        <li
+                            className="nav-item cart"
+                            onClick={() => history.push('/cart') & setOnclick(false)}
+
+                        >
+                            <img src={iconCart} alt="iconCart" height="25px" width="auto" />
+                            <span className="item-menu">Giỏ Hàng</span>
+                        </li>
                     </ul>
                 </nav>
             </header >

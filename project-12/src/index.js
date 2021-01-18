@@ -36,7 +36,6 @@ ReactDOM.render(
           <DefaultLayout exact path="/auth" component={Auth} />
           <DefaultLayout exact path="/sanpham" component={Product} />
           <DefaultLayout exact path="/sanphamkhac" component={ProductOther} />
-
         </Switch>
       </Router>
     </Provider>
