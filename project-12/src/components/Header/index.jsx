@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import history from '../../util/history';
-import iconToggle from '../../image/bars-solid.svg'
 import iconUser from '../../image/user.svg'
 import iconCart from '../../image/cart.png'
 import './styles.css';
@@ -19,28 +18,28 @@ function Header() {
         {
             title: "Giới Thiệu",
             icon: "//theme.hstatic.net/1000388227/1000497091/14/icon_nav_2.png?v=1131",
-            path: "/gioithieu",
+            path: "/introduce",
         },
         {
             title: "Sản Phẩm",
             icon: "//theme.hstatic.net/1000388227/1000497091/14/icon_nav_3.png?v=1131",
-            path: "/sanpham",
+            path: "/product?type=watch",
             menuItemChild: [
                 {
                     title: "G-SHOCK",
-                    path: "/sanpham?type=product&style=g-shock"
+                    path: "/product?type=watch&style=g-shock"
                 },
                 {
                     title: "BABY-G",
-                    path: "/sanpham?type=product&style=baby-g"
+                    path: "/product?type=watch&style=baby-g"
                 },
                 {
                     title: "EDIFICE",
-                    path: "/sanpham?type=product&style=edifice"
+                    path: "/product?type=watch&style=edifice"
                 },
                 {
                     title: "SHEEN",
-                    path: "/sanpham?type=product&style=sheen"
+                    path: "/product?type=watch&style=sheen"
                 },
             ]
         },
@@ -57,23 +56,23 @@ function Header() {
         {
             title: "Sản Phẩm Khác",
             icon: "//theme.hstatic.net/1000388227/1000497091/14/icon_nav_6.png?v=1131",
-            path: "/sanphamkhac",
+            path: "/productOther?type=watchOther",
             menuItemChild: [
                 {
                     title: "CLOCK",
-                    path: "/sanphamkhac?type=product&style=clock"
+                    path: "/productOther?type=watchOther&style=clock"
                 },
                 {
                     title: "PRO TREK",
-                    path: "/sanphamkhac?type=product&style=pro-trek"
+                    path: "/productOther?type=watchOther&style=pro-trek"
                 },
                 {
                     title: "STANDARD",
-                    path: "/sanphamkhac?type=product&style=standard"
+                    path: "/productOther?type=watchOther&style=standard"
                 },
                 {
                     title: "ĐỒNG HỒ TRẺ EM",
-                    path: "/sanphamkhac?type=product&style=donghotreem"
+                    path: "/productOther?type=watchOther&style=donghotreem"
                 },
             ]
         },

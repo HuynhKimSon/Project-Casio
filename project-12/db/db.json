@@ -1,0 +1,44 @@
+{
+    "productData": [
+        {
+            "id": 1,
+            "type": "product",
+            "style": "gshock",
+            "name": "DW-9052GBX-1A9SDR",
+            "price": 8155000,
+            "image": "https://product.hstatic.net/1000388227/product/gm-6900cx-4dr_5ea2a601c5ce44a5b4a1abaa4385774f_grande.png",
+            "description": "Đặc điểm kỹ thuậtVật liệu vỏ / vành bezel: Nhựa / Thép không gỉ, Dây đeo bằng nhựa, Chống va đập, Mặt kính khoáng, Chống nước ở độ sâu 200 mét, Đèn cực tím phát...",
+            "detail": ""
+        },
+        {
+            "id": 2,
+            "type": "product",
+            "style": "gshock",
+            "name": "DW-9052GBX-1A9SDR",
+            "price": 8155000,
+            "image": "https://product.hstatic.net/1000388227/product/gm-6900cx-4dr_5ea2a601c5ce44a5b4a1abaa4385774f_grande.png",
+            "description": "Đặc điểm kỹ thuậtVật liệu vỏ / vành bezel: Nhựa / Thép không gỉ, Dây đeo bằng nhựa, Chống va đập, Mặt kính khoáng, Chống nước ở độ sâu 200 mét, Đèn cực tím phát...",
+            "detail": ""
+        },
+        {
+            "id": 3,
+            "type": "product",
+            "style": "gshock",
+            "name": "DW-9052GBX-1A9SDR",
+            "price": 8155000,
+            "image": "https://product.hstatic.net/1000388227/product/gm-6900cx-4dr_5ea2a601c5ce44a5b4a1abaa4385774f_grande.png",
+            "description": "Đặc điểm kỹ thuậtVật liệu vỏ / vành bezel: Nhựa / Thép không gỉ, Dây đeo bằng nhựa, Chống va đập, Mặt kính khoáng, Chống nước ở độ sâu 200 mét, Đèn cực tím phát...",
+            "detail": ""
+        },
+        {
+            "id": 4,
+            "type": "product",
+            "style": "gshock",
+            "name": "DW-9052GBX-1A9SDR",
+            "price": 8155000,
+            "image": "https://product.hstatic.net/1000388227/product/gm-6900cx-4dr_5ea2a601c5ce44a5b4a1abaa4385774f_grande.png",
+            "description": "Đặc điểm kỹ thuậtVật liệu vỏ / vành bezel: Nhựa / Thép không gỉ, Dây đeo bằng nhựa, Chống va đập, Mặt kính khoáng, Chống nước ở độ sâu 200 mét, Đèn cực tím phát...",
+            "detail": ""
+        }
+    ]
+}

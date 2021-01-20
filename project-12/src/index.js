@@ -17,6 +17,9 @@ import Auth from './pages/Auth/index.jsx'
 import Product from './pages/Product/index.jsx'
 import ProductOther from './pages/ProductOther/index.jsx'
 import Introduce from './pages/Introduce/index.jsx';
+import Cart from './pages/Cart/index.jsx'
+
+import ErrorPage from './pages/Error/index.jsx'
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -36,6 +39,10 @@ ReactDOM.render(
           <DefaultLayout exact path="/auth" component={Auth} />
           <DefaultLayout exact path="/sanpham" component={Product} />
           <DefaultLayout exact path="/sanphamkhac" component={ProductOther} />
+          <DefaultLayout exact path="/cart" component={Cart} />
+
+          <DefaultLayout component={ErrorPage} />
+
         </Switch>
       </Router>
     </Provider>
