@@ -229,7 +229,7 @@ function Auth() {
                                 <div className="form-group">
                                     <button
                                         type="submit"
-                                        class="btn btn-outline-secondary btn-register"
+                                        className="btn btn-outline-secondary btn-register"
                                         style={{ width: "100%", height: "40px", borderRadius: 0, backgroundColor: "#ffffff", color: "#6f6a60" }}
                                     >Đăng Ký
                                     </button>
